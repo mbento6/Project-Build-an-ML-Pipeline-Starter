@@ -83,7 +83,7 @@ def go(config: DictConfig):
 
         if "data_split" in active_steps:
             _ = mlflow.run(
-                os.path.join(hydra.utils.get_original_cwd(), "src", "train_val_test_split"),
+                os.path.join(hydra.utils.get_original_cwd(), "components", "train_val_test_split"),
                 entry_point="main",
                 parameters={
                     "input": "clean_sample.csv:latest",
